@@ -1,0 +1,60 @@
+<h1> Application Form </h1>
+<form>
+  Full Name:
+  <input type="text" name="usrname">
+  <br> Email Address:
+  <input type="email" name="email">
+  <br> Password:
+  <input type="password" name="password">
+  <br> Date of Birth:
+  <input type="date" name="dob">
+  <br> Graduation Year:
+  <input type="range" name="gradYr" min="1950" max="2030">
+  <br> Phone Number:
+  <input type="tel" name="phoneNum">
+  <br>
+
+  <fieldset>
+    <legend>
+      Demographics
+    </legend>
+    Gender:
+    <input type="radio" name="genderOption" value="male"> Male
+    <input type="radio" name="genderOption" value="female"> Female
+    <input type="radio" name="genderOption" value="undisclosed"> Undisclosed
+    <p>
+    <br> Race:
+    <input type="checkbox" name="raceOption" value="aframerican"> African American
+    <input type="checkbox" name="raceOption" value="asian"> Asian
+    <input type="checkbox" name="raceOption" value="white"> White
+    <input type="checkbox" name="raceOption" value="amIndian"> American Indian
+    <input type="checkbox" name="raceOption" value="pacIslander"> Pacific Islander
+    <input type="checkbox" name="raceOption" value="other"> Other
+    <br>
+
+  </fieldset>
+
+  <fieldset>
+    <legend>
+      Personal Preferences:
+    </legend>
+    Favorite Color:
+    <input type="color" name="favcolor">
+    <br>
+  </fieldset>
+<p>
+  Resume Submission:
+  <input type="file" name="resume">
+<p>
+<!--
+  <br> Online Profile:
+  <input type="url" name="onlineProf">
+  <br> Why are you most suited for this position?
+  <input type="text" name="shortAnswer">
+  <br>
+-->
+<br>
+  <input type="submit" value="Submit">
+  <input type="reset" value="Reset">
+  <br>
+</form>
