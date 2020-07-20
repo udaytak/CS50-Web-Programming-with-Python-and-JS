@@ -1,0 +1,29 @@
+<html>
+<head>
+<!--<script src="jquery.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<button id="clickMe">Click Me!</button>
+<p>
+You've clicked the button <span id="numClicks">0 times</span>.
+
+<script>
+var clicks = 0;
+
+function clickHandler() {
+  clicks++;
+  var numClicksSpan = $('#numClicks');
+  if (clicks == 1)
+    numClicksSpan.html('once');
+  else
+    numClicksSpan.html(clicks + ' times');
+}
+
+$('#clickMe').click(clickHandler);
+
+
+</script>
+
+</body>
+</html>
