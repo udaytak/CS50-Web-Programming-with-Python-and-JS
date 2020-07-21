@@ -1,0 +1,31 @@
+<html>
+<head>
+<!--<script src="jquery.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<ul>
+<li>dog</li>
+<li>cat</li>
+<li>elephant</li>
+<li>bear</li>
+</ul>
+
+<script>
+$('li').on({
+  mouseenter: function() {
+    $(this).css('color', 'red');
+    $(this).css('font-size', '120%');
+  },
+  mouseleave: function() {
+    $(this).css('color', 'black');
+    $(this).css('font-size', '100%');
+  },
+  click: function() {
+    $(this).css('background-color', 'yellow');
+  }
+});
+</script>
+
+</body>
+</html>
