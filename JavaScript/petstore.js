@@ -27,6 +27,25 @@ function calculateFoodOrder(numAnimals, avgFood) {
  */
 function mostPopularDays(week) {
     // IMPLEMENT THIS FUNCTION!
+      var max = 0;
+  if (week === null || week.length < 1) {
+      return null;
+  }
+  for (var m = 0; m < week.length; m++) {
+    if (week[m].traffic > max) {
+      max = week[m].traffic;
+    }
+  }
+  var days = [];
+  for (var n = 0; n < week.length; n++) {
+    if (week[n].traffic === max) {
+      days.push(week[n].name);
+    }
+  }
+  if (days.length === 1) {
+    return days[0];
+  }
+  return days;
 }
 
 
