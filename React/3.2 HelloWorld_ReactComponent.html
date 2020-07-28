@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- saved from url=(0094)https://courses.edx.org/asset-v1:PennX+SD4x+3T2019+type@asset+block/3.2-react-TimesViewed.html -->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="./3.2 HelloWorld_ReactComponent_files/1beac94c95"></script>
+    <script src="./3.2 HelloWorld_ReactComponent_files/nr-spa-1169.min.js.download"></script>
+    <script type="text/javascript"></script>
+    <title>Hello World</title>
+    <script src="./3.2 HelloWorld_ReactComponent_files/react.js.download"></script>
+    <script src="./3.2 HelloWorld_ReactComponent_files/react-dom.js.download"></script>
+    <script src="./3.2 HelloWorld_ReactComponent_files/babel.min.js.download"></script>
+    <script>
+    	"use strict";
+var _createClass = (function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+  return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) defineProperties(Constructor, staticProps);
+    return Constructor;
+  };
+})();
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (!self) {
+    throw new ReferenceError(
+      "this hasn't been initialised - super() hasn't been called"
+    );
+  }
+  return call && (typeof call === "object" || typeof call === "function")
+    ? call
+    : self;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError(
+      "Super expression must either be null or a function, not " +
+        typeof superClass
+    );
+  }
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      enumerable: false,
+      writable: true,
+      configurable: true,
+    },
+  });
+  if (superClass)
+    Object.setPrototypeOf
+      ? Object.setPrototypeOf(subClass, superClass)
+      : (subClass.__proto__ = superClass);
+}
+
+var TimesViewed = (function (_React$Component) {
+  _inherits(TimesViewed, _React$Component);
+
+  function TimesViewed(props) {
+    _classCallCheck(this, TimesViewed);
+
+    var _this = _possibleConstructorReturn(
+      this,
+      (TimesViewed.__proto__ || Object.getPrototypeOf(TimesViewed)).call(
+        this,
+        props
+      )
+    );
+
+    var timesViewed = 0;
+    if (localStorage.timesViewed) {
+      timesViewed = localStorage.timesViewed;
+    }
+    timesViewed++;
+    _this.state = { numViews: timesViewed };
+    localStorage.timesViewed = timesViewed;
+    return _this;
+  }
+
+  _createClass(TimesViewed, [
+    {
+      key: "render",
+      value: function render() {
+        return React.createElement("b", null, "Hello ", this.state.numViews);
+      },
+    },
+  ]);
+
+  return TimesViewed;
+})(React.Component);
+
+ReactDOM.render(React.createElement(TimesViewed, null), document.getElementById('container'));
+</script>
+</head>
+  <body>
+    <div id="container"></div>
+    <script type="text/jsx">
+
+      class TimesViewed extends React.Component {
+         constructor(props) {
+            super(props);
+            var timesViewed = 0;
+            if (localStorage.timesViewed) {
+                timesViewed = localStorage.timesViewed;
+            }
+            timesViewed++;
+            this.state = { numViews: timesViewed };
+            localStorage.timesViewed = timesViewed;
+         }
+
+         render() {
+           return <b>Hello {this.state.numViews}</b>;
+         }
+      }
+
+      ReactDOM.render(
+        <TimesViewed />,
+        document.getElementById('container')
+      );
+
+    </script>
+  
+
+</body></html>
